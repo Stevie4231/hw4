@@ -598,6 +598,7 @@ div.tocify {
 <li>GPA：超過 4.3 為錯誤資料，請改為缺失值</li>
 <li>gender：“M” 改為 1、“F” 改為2。其它的則改為 0。注意：gender 資料類型需為 <code>integer</code>。(Hint: 注意 gender 原本的資料類型是沒有教過的 factor)</li>
 </ul>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data </span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>Q_Q <span class="ot">=</span> <span class="fu">data.frame</span>(</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nickname =</span> <span class="fu">c</span>(<span class="st">&#39;SeanN&#39;</span>, <span class="st">&#39;solid&#39;</span>, <span class="st">&#39;wow&#39;</span>, <span class="st">&#39;87heng87&#39;</span>, <span class="st">&#39;rox&#39;</span>, <span class="st">&#39;Ycyc&#39;</span>),</span>
@@ -643,6 +644,32 @@ div.tocify {
 <span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4      Lin      2     4     86        86  NA</span></span>
 <span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5      Ben      2     4     87        87  NA</span></span>
 <span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6      Ber      2     2     78        87 3.8</span></span></code></pre></div>
+=======
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="co"># Data </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>Q_Q =<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a>  <span class="dt">nickname =</span> <span class="kw">c</span>(<span class="st">&#39;SeanN&#39;</span>, <span class="st">&#39;solid&#39;</span>, <span class="st">&#39;wow&#39;</span>, <span class="st">&#39;87heng87&#39;</span>, <span class="st">&#39;rox&#39;</span>, <span class="st">&#39;Ycyc&#39;</span>),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a>  <span class="dt">gender =</span> <span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot; F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;Stone&quot;</span>),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a>  <span class="dt">grade =</span> <span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a>  <span class="dt">q_self =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">98</span>, <span class="dv">85</span>, <span class="dv">86</span>, <span class="dv">87</span>, <span class="dv">78</span>),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true"></a>  <span class="dt">q_teacher =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">98</span>, <span class="dv">85</span>, <span class="dv">86</span>, <span class="dv">87</span>, <span class="dv">87</span>),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true"></a>  <span class="dt">GPA =</span> <span class="kw">c</span>(<span class="fl">4.8</span>, <span class="fl">4.3</span>, <span class="fl">5.2</span>, <span class="fl">5.5</span>, <span class="fl">4.7</span>, <span class="fl">3.8</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true"></a>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true"></a><span class="co">####### Do Not modify the code above #########</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true"></a><span class="co"># Write your code here</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true"></a><span class="co"># Do Not modify the code below</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true"></a>Q_Q</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true"></a><span class="co"># Should print out</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true"></a><span class="co">#&gt;   nickname gender grade q_self q_teacher GPA</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true"></a><span class="co">#&gt; 1    SeanN      1     5     95        95  NA</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true"></a><span class="co">#&gt; 2    solid      0     5     98        98 4.3</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true"></a><span class="co">#&gt; 3      wow      1     4     85        85  NA</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true"></a><span class="co">#&gt; 4 87heng87      2     4     86        86  NA</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true"></a><span class="co">#&gt; 5      rox      2     4     87        87  NA</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true"></a><span class="co">#&gt; 6     Ycyc      0     2     78        87 3.8</span></span></code></pre></div>
+>>>>>>> ff9943444348803afb45a0b6ae4b3a3b0de146ba
 <pre><code>#&gt;   nickname gender grade q_self q_teacher GPA
 #&gt; 1    SeanN      1     5     95        95  NA
 #&gt; 2    solid      2     5     98        98 4.3
