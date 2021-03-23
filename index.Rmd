@@ -1,5 +1,5 @@
 ---
-author: "未命名 B01201001 一般系"
+author: "戴君旭 B08703030 財金系"
 title: "HW 4: List, Loop, and Data frame"
 date: | 
   | 2021-03-18
@@ -42,6 +42,7 @@ df
 
 ```{r}
 # Write your code here
+df[df$supp == "VC", c("len","supp")]
 
 # should print out:
 #> # A tibble: 30 x 2
@@ -67,6 +68,7 @@ df
 
 ```{r}
 # Write your code here
+df[df$supp == "VC" & df$len < 25 ,]
 
 # should print out:
 #> # A tibble: 24 x 3
@@ -92,6 +94,7 @@ df
 
 ```{r}
 # Write your code here
+df[(df$len + 15*df$dose) > 40, ]
 
 # should print out:
 #> # A tibble: 24 x 3
@@ -148,6 +151,12 @@ member <- list(
 
 n_years_later <- function(member_data, years) {
   # Write your code here
+  result <- list()
+  for (x in member_data){
+    x <- list(list(name = x$name, age = as.numeric(x$age) + years))
+    result <- append(result, x)
+  }
+  return(result)
 }
 
 
@@ -171,7 +180,8 @@ for (y in -1:1) {
    
 ```{r}
 # Write your code here
-
+setwd("/Users/stevetai/Documents/GitHub/hw4")
+cute_cute <- as.tibble(read.csv("week3Rclass.csv"))
 # Do not modify the code below
 cute_cute
 # Should print out
@@ -210,8 +220,29 @@ Q_Q = data.frame(
 ####### Do Not modify the code above #########
 
 # Write your code here
-
-
+gpa <- c()
+for (x in Q_Q$GPA){
+  if (x > 4.3){
+    gpa <- append(gpa, NA)
+  }
+  else{
+    gpa <- append(gpa, x)
+  }
+}
+gend <- c()
+for (y in Q_Q$gender){
+  if (gsub("^\\s+|\\s+$", "", as.character(y)) == "M"){
+    gend <- append(gend, as.integer(1))
+  }
+  else if (gsub("^\\s+|\\s+$", "", as.character(y)) == "F"){
+    gend <- append(gend, as.integer(2))
+  }
+  else{
+    gend <- append(gend, as.integer(0))
+  }
+}
+Q_Q$GPA <- gpa
+Q_Q$gender <- gend
 # Do Not modify the code below
 Q_Q
 # Should print out
@@ -232,7 +263,16 @@ Q_Q
   
 ```{r}
 # Write your code here
-
+fav <- c()
+for (z in cute_cute$q_self){
+  if (z < 70){
+    fav <- append(fav, "一代一代")
+  }
+  else{
+    fav <- append(fav, "根本可愛動物區")
+  }
+}
+cute_cute["favorite_word"] <- fav
 # Do not modify the code below
 cute_cute
 # Should print out
